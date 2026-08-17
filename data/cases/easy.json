@@ -1,0 +1,29 @@
+{
+  "id":"HS-1103","nextCaseId":"HS-2507","title":"Cái chết trong nhà kính","titleAccent":"nhà kính","difficulty":"DỄ",
+  "lede":"Chủ một vườn hoa được tìm thấy trong nhà kính khóa kín sau cơn mưa. Bốn người có động cơ, nhưng hung thủ đã để lại một dấu vết rất khó che giấu.",
+  "facts":{"location":"Vườn hoa Mộc Lan","time":"18:30 · 03.03.2026","victim":"Lê Minh Quân, 46","cause":"Chấn thương vùng đầu"},
+  "overview":{"heading":"Cơn mưa và cánh cửa khóa","report":"18:30, nhân viên phát hiện Lê Minh Quân nằm trong nhà kính số 2. Cửa chính khóa tự động, chìa của nạn nhân vẫn trong túi. Mưa bắt đầu lúc 18:10; nền đất đỏ cạnh cửa phụ còn in một dấu giày mới.","quote":"“Không ai có lý do bước vào nhà kính sau giờ đóng cửa.”","hint":"Hãy tìm vật chứng xuất hiện ở cả hiện trường và trên người một nghi phạm."},
+  "culpritId":"partner","culpritName":"Trương Quốc Hưng",
+  "correctMessage":"Bạn đã xác định đúng Trương Quốc Hưng từ dấu bùn và chiếc cúc áo.",
+  "wrongMessage":"Bạn đã buộc tội {name}, nhưng hung thủ là Trương Quốc Hưng.",
+  "explanation":"Quân chết sau khi mưa bắt đầu lúc 18:10. Dấu giày dính đất đỏ đi từ cửa phụ vào nhà kính trùng cỡ và hoa văn đế giày của Hưng. Chiếc cúc đồng trong tay nạn nhân khớp đúng vị trí bị thiếu trên áo khoác của ông ta. Log cửa ghi thẻ của Hưng lúc 18:12, còn cuộc họp trực tuyến chỉ ghi tên đăng nhập — camera và micro đều tắt. Hưng đã để máy tham gia họp để tạo ngoại phạm rồi đi qua cửa phụ gây án.",
+  "questions":[
+    {"id":"alibi","label":"Bạn ở đâu từ 18:00 đến 18:30?"},
+    {"id":"motive","label":"Bạn có mâu thuẫn gì với nạn nhân?"},
+    {"id":"greenhouse","label":"Bạn có vào nhà kính số 2 không?"},
+    {"id":"button","label":"Bạn giải thích thế nào về chiếc cúc áo?"}
+  ],
+  "suspects":[
+    {"id":"partner","name":"Trương Quốc Hưng","role":"Đối tác kinh doanh","portrait":"assets/suspects-easy/partner.png","motive":"Nạn nhân định bán vườn hoa mà không chia lợi nhuận cho ông.","alibi":"Họp trực tuyến tại văn phòng","tone":"cứng rắn","answers":{"alibi":"Tôi tham gia họp trực tuyến từ 18:00 đến 18:35. Tài khoản của tôi hiện rõ trong danh sách.","motive":"Quân muốn bán vườn hoa sau lưng tôi. Chúng tôi cãi nhau, nhưng tôi sẽ kiện chứ không giết ông ấy.","greenhouse":"Tôi không vào nhà kính số 2 tối đó. Đôi giày bẩn vì tôi đi qua bãi xe lúc trời mưa.","button":"Áo khoác của tôi có thể mất cúc từ nhiều ngày trước. Tôi không biết vì sao nó ở trong tay Quân."}},
+    {"id":"florist","name":"Mai Ngọc Lan","role":"Quản lý hoa","portrait":"assets/suspects-easy/florist.png","motive":"Nạn nhân vừa thông báo sẽ cho cô nghỉ việc vào cuối tháng.","alibi":"Đóng gói hoa tại kho lạnh","tone":"lo lắng","answers":{"alibi":"Tôi đóng gói đơn hàng trong kho lạnh. Máy quét mã ghi tôi làm liên tục đến 18:27.","motive":"Tôi sắp mất việc, nhưng Quân hứa sẽ giới thiệu chỗ mới. Tôi không hề muốn ông ấy chết.","greenhouse":"Tôi vào nhà kính số 2 lúc chiều để tưới cây, trước khi mưa. Tôi mang ủng cao su không có vân ngang.","button":"Đồng phục của tôi dùng cúc nhựa xanh, không phải cúc đồng như vật chứng."}},
+    {"id":"exhusband","name":"Vũ Thanh Sơn","role":"Chồng cũ của nạn nhân","portrait":"assets/suspects-easy/exhusband.png","motive":"Hai người đang tranh chấp quyền sở hữu mảnh đất của vườn hoa.","alibi":"Đón con tại trường học","tone":"bực bội","answers":{"alibi":"Tôi đón con lúc 18:05 rồi ghé cửa hàng tiện lợi. Hóa đơn của tôi ghi 18:19.","motive":"Chúng tôi tranh chấp đất sau ly hôn. Tôi muốn tòa giải quyết, không muốn tự biến mình thành tội phạm.","greenhouse":"Tôi biết cửa phụ vì từng làm ở đây, nhưng đã ba tháng tôi không tới gần nhà kính.","button":"Tôi mặc áo khoác khóa kéo. Trên áo không có loại cúc đồng đó."}},
+    {"id":"apprentice","name":"Hà Bảo Trâm","role":"Nhân viên học việc","portrait":"assets/suspects-easy/apprentice.png","motive":"Nạn nhân phát hiện cô làm hỏng một giống hoa quý và yêu cầu bồi thường.","alibi":"Giao hoa ở quận bên","tone":"rụt rè","answers":{"alibi":"Tôi giao hoa từ 17:40. Khách ký nhận lúc 18:22 ở cách đây sáu cây số.","motive":"Tôi làm hỏng giống hoa quý và rất sợ phải bồi thường. Nhưng chú Quân vẫn cho tôi thời gian sửa sai.","greenhouse":"Tôi đã khóa cửa chính lúc 17:35 trước khi đi giao hàng. Tôi không có chìa cửa phụ.","button":"Áo của tôi dùng nút bấm bạc. Tôi chưa từng thấy chiếc cúc đồng đó."}}
+  ],
+  "evidence":[
+    {"title":"Dấu giày trên đất đỏ","tag":"HIỆN TRƯỜNG","text":"Cỡ 42, đế có ba vạch ngang; đi từ cửa phụ vào sau khi mưa bắt đầu."},
+    {"title":"Chiếc cúc đồng","tag":"VẬT CHỨNG","text":"Nằm trong tay nạn nhân, cùng loại với cúc còn lại trên áo khoác của Quốc Hưng."},
+    {"title":"Log cửa lúc 18:12","tag":"AN NINH","text":"Thẻ của Quốc Hưng mở cửa phụ nhà kính số 2 hai phút sau khi mưa bắt đầu."},
+    {"title":"Cuộc họp trực tuyến","tag":"KỸ THUẬT SỐ","text":"Tài khoản Hưng có tham gia, nhưng camera và micro tắt trong toàn bộ cuộc họp."},
+    {"title":"Hóa đơn cửa hàng","tag":"TÀI LIỆU","text":"Xác nhận Thanh Sơn thanh toán ở cách hiện trường 5 km vào lúc 18:19."}
+  ]
+}
