@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && mkdir -p dist/.next && cp -R .next/standalone/. dist/ && cp -R .next/static dist/.next/static && cp -R public dist/public",
+    "build": "next build && mkdir -p dist/.next dist/server dist/.openai && cp -R .next/standalone/. dist/ && cp -R .next/static dist/.next/static && cp -R public dist/public && cp sites-entry.js dist/server/index.js && cp .openai/hosting.json dist/.openai/hosting.json",
     "start": "next start"
   },
   "dependencies": {
