@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && mkdir -p dist/server/.next dist/.openai && cp -R .next/standalone/. dist/server/ && cp -R .next/static dist/server/.next/static && cp -R public dist/server/public && cp sites-entry.js dist/server/index.js && cp .openai/hosting.json dist/.openai/hosting.json",
+    "build": "next build && opennextjs-cloudflare build --skipNextBuild && mkdir -p dist/server dist/.openai && cp -R .open-next dist/server/.open-next && cp sites-entry.js dist/server/index.js && cp .openai/hosting.json dist/.openai/hosting.json",
     "start": "next start"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "1.20.2",
     "next": "15.5.9",
     "react": "19.0.4",
     "react-dom": "19.0.4"
