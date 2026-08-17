@@ -2,15 +2,22 @@
   "name": "ho-so-den-ai-detective",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && opennextjs-cloudflare build --skipNextBuild && mkdir -p dist/server dist/.openai && cp -R .open-next dist/server/.open-next && cp sites-entry.js dist/server/index.js && cp .openai/hosting.json dist/.openai/hosting.json",
-    "start": "next start"
+    "dev": "vinext dev",
+    "build": "rm -rf dist && vinext build && mkdir -p dist/.openai && cp .openai/hosting.json dist/.openai/hosting.json",
+    "start": "vinext start"
   },
   "dependencies": {
-    "@opennextjs/cloudflare": "1.20.2",
-    "next": "15.5.21",
-    "react": "19.0.4",
-    "react-dom": "19.0.4"
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-server-dom-webpack": "19.2.6",
+    "vinext": "1.0.0-beta.6"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.43.0",
+    "@vitejs/plugin-react": "6.0.0",
+    "@vitejs/plugin-rsc": "0.5.34",
+    "vite": "8.1.4"
   }
 }
