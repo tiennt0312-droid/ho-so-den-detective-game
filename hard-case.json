@@ -1,0 +1,37 @@
+{
+  "id":"HS-4109",
+  "nextCaseId":"HS-1103",
+  "title":"Bản thu âm lúc 0 giờ",
+  "titleAccent":"0 giờ",
+  "difficulty":"CAO",
+  "lede":"Một nhà sáng lập công nghệ chết trong phòng thu cách âm. Camera cho thấy không ai bước vào, nhưng giọng nói của ông vẫn vang lên sau thời điểm pháp y xác định ông đã chết.",
+  "facts":{"location":"Aurora Gallery","time":"00:20 · 09.11.2025","victim":"Hoàng Vĩnh Phúc, 39","cause":"Chấn thương vùng đầu"},
+  "overview":{"heading":"Giọng nói của một người đã chết","report":"00:20, cửa phòng thu B được mở bằng chìa khóa khẩn cấp. Hoàng Vĩnh Phúc nằm cạnh bàn điều khiển, đồng hồ thông minh đã vỡ. Camera hành lang không ghi nhận ai vào phòng sau 23:31. Tuy vậy, lúc 00:05, ba nhân chứng đều nghe giọng ông qua hệ thống nội bộ.","quote":"“Tôi vẫn đang làm việc. Đừng ai vào đây.”","hint":"Ba chiếc đồng hồ trong hồ sơ không cùng kể một câu chuyện."},
+  "culpritId":"audio",
+  "culpritName":"Lê Trọng Duy",
+  "correctMessage":"Bạn đã vạch trần màn ngụy tạo thời gian của Lê Trọng Duy.",
+  "wrongMessage":"Bạn đã buộc tội {name}, nhưng người dựng nên ngoại phạm giả là Lê Trọng Duy.",
+  "explanation":"Đồng hồ nạn nhân dừng nhịp tim lúc 23:43, nên giọng nói lúc 00:05 là giả. Phổ âm cho thấy ba nhịp thở trùng tuyệt đối với một podcast cũ. Log bàn trộn lúc 23:47 chỉ là macro tự động; Duy không hề ở trước bàn điều khiển như lời khai. Bụi cách âm trên giày anh ta khớp với đường bảo trì nối thẳng phòng điều khiển và phòng thu B. Cuối cùng, mã serial lặp lại chứng minh lượt quẹt thẻ 00:02 chỉ là gói truy cập được phát lại để đẩy thời điểm gây án về sau.",
+  "questions":[
+    {"id":"alibi","label":"Bạn ở đâu từ 23:30 đến 00:15?"},
+    {"id":"motive","label":"Nạn nhân đang điều tra bí mật gì về bạn?"},
+    {"id":"audio","label":"Bạn giải thích thế nào về giọng nói lúc 00:05?"},
+    {"id":"access","label":"Bạn có thể tiếp cận phòng thu B bằng cách nào?"}
+  ],
+  "suspects":[
+    {"id":"pianist","name":"Trần Khánh Vy","role":"Nghệ sĩ piano","portrait":"assets/suspects-hard/pianist.png","motive":"Nạn nhân định hủy hợp đồng độc quyền ngay trước đêm biểu diễn.","alibi":"Tập đàn trên sân khấu chính","tone":"kiêu hãnh","answers":{"alibi":"Tôi tập đàn trên sân khấu từ 23:25 đến gần nửa đêm. Camera chỉ mất tôi khỏi khung hình đúng hai phút khi đổi bản nhạc.","motive":"Phúc định hủy hợp đồng của tôi. Tôi tức giận, nhưng buổi diễn hôm sau là cơ hội cuối để cứu sự nghiệp.","audio":"Tôi nghe rất rõ giọng anh ta lúc 00:05 qua loa nội bộ. Khi ấy tôi tin anh ta còn sống.","access":"Thẻ của tôi chỉ mở sân khấu và phòng hóa trang. Tôi không có quyền vào phòng thu B."}},
+    {"id":"audio","name":"Lê Trọng Duy","role":"Kỹ sư âm thanh","portrait":"assets/suspects-hard/audio.png","motive":"Nạn nhân phát hiện anh bí mật bán dữ liệu giọng nói của khách hàng.","alibi":"Điều khiển bàn trộn âm","tone":"tỉnh táo","answers":{"alibi":"Tôi ở phòng điều khiển từ 23:35 đến 00:15. Log bàn trộn ghi từng thao tác của tôi.","motive":"Anh Phúc hỏi về vài file bị thất lạc. Đó là lỗi sao lưu, không phải cuộc điều tra nhằm vào tôi.","audio":"Đó là giọng Phúc phát trực tiếp từ micro phòng B. Hệ thống không thể tự tạo ra một câu nói như vậy.","access":"Tôi có thẻ kỹ thuật, nhưng cửa phòng B bị khóa từ bên trong. Đường bảo trì đã lâu không ai dùng."}},
+    {"id":"assistant","name":"Phạm Đức Minh","role":"Trợ lý riêng","portrait":"assets/suspects-hard/assistant.png","motive":"Một bảng tính bị xóa cho thấy anh đã biển thủ tiền công ty.","alibi":"Gọi video tại quán cà phê","tone":"né tránh","answers":{"alibi":"Tôi gọi video với kế toán từ 23:34 đến 00:11 tại quán đối diện. Camera quán sẽ xác nhận.","motive":"Tôi xóa bảng tính vì nó chứa khoản chi chưa được duyệt. Tôi sợ mất việc, nhưng Phúc vẫn cần tôi xử lý khủng hoảng.","audio":"Tôi nghe đoạn thông báo qua cuộc gọi. Nó khiến tôi nghĩ anh Phúc đang cố tình tránh mặt mọi người.","access":"Thẻ trợ lý mở được hành lang phòng thu, nhưng không mở cửa phòng B sau 22 giờ."}},
+    {"id":"curator","name":"Ngô Lan Chi","role":"Giám tuyển gallery","portrait":"assets/suspects-hard/curator.png","motive":"Nạn nhân chuẩn bị rút tài trợ khiến gallery đứng trước nguy cơ đóng cửa.","alibi":"Kiểm kê tác phẩm tầng hai","tone":"điềm tĩnh","answers":{"alibi":"Tôi kiểm kê cùng hai nhân viên đến 23:55. Sau đó tôi xuống sảnh và không tới khu phòng thu.","motive":"Nếu Phúc rút tiền, gallery có thể đóng cửa. Tôi đã cầu xin anh ấy đổi ý, không đe dọa anh ấy.","audio":"Hệ thống nội bộ phát giọng anh ấy lúc 00:05. Âm thanh rất sạch, gần như không có tiếng phòng.","access":"Tôi giữ chìa khóa khẩn cấp nhưng hộp niêm phong chỉ được mở lúc 00:20 trước mặt bảo vệ."}},
+    {"id":"investor","name":"Đặng Quốc Bảo","role":"Nhà đầu tư","portrait":"assets/suspects-hard/investor.png","motive":"Nạn nhân sắp công bố hành vi thao túng cổ phần của ông.","alibi":"Tiếp khách ở sảnh chính","tone":"gay gắt","answers":{"alibi":"Tôi tiếp hai đối tác ở sảnh từ 23:20 đến nửa đêm. Sau đó tôi đứng ngoài sân gọi xe.","motive":"Phúc và tôi tranh chấp quyền biểu quyết. Công bố của cậu ta sẽ làm tôi mất ghế, nhưng giết cậu ta chỉ khiến tôi bị nghi đầu tiên.","audio":"Tôi không nghe trực tiếp. Cô Chi kể rằng Phúc vừa yêu cầu không ai vào phòng.","access":"Tôi là nhà đầu tư, không phải nhân viên. Thẻ khách của tôi không qua được cửa an ninh tầng phòng thu."}}
+  ],
+  "evidence":[
+    {"title":"Đồng hồ thông minh vỡ","tag":"PHÁP Y","text":"Nhịp tim dừng đột ngột lúc 23:43; thiết bị mất kết nối mạng hai phút sau đó."},
+    {"title":"Bản ghi lúc 00:05","tag":"ÂM THANH","text":"Ba nhịp thở trùng khớp tuyệt đối với podcast nạn nhân thu sáu tháng trước."},
+    {"title":"Log bàn trộn","tag":"KỸ THUẬT SỐ","text":"Chuỗi thao tác từ 23:47 đến 00:08 được chạy bởi một macro đã lập lịch."},
+    {"title":"Bụi cách âm màu lam","tag":"VẬT CHỨNG","text":"Bám trên giày kỹ sư âm thanh và trong đường bảo trì nối hai phòng."},
+    {"title":"Hai mã thẻ giống nhau","tag":"AN NINH","text":"Lượt quẹt 00:02 lặp đúng serial của lượt 22:18 — dấu hiệu phát lại gói truy cập."},
+    {"title":"Bảng tính bị xóa","tag":"TÀI CHÍNH","text":"Trợ lý đã che giấu khoản thiếu hụt 480 triệu đồng. Đây là động cơ thật nhưng không khớp thời gian."},
+    {"title":"Máy đếm nhịp bị vỡ","tag":"PHÁP Y","text":"Máu nạn nhân trên cạnh máy; thiết bị vốn thuộc phòng điều khiển âm thanh."}
+  ]
+}

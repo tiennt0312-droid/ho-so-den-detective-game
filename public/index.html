@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1014" />
+  <title>Hồ Sơ Số 07 — AI Detective Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="suspects.css" />
+  <link rel="stylesheet" href="interrogation.css" />
+  <link rel="stylesheet" href="difficulty.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Trang chủ Hồ Sơ Đen">
+      <span class="brand-mark">H</span>
+      <span>HỒ SƠ ĐEN</span>
+    </a>
+    <div class="case-meta">
+      <span class="live-dot"></span>
+      <span>VỤ ÁN ĐANG MỞ</span>
+      <span class="divider"></span>
+      <span id="caseCode">HS–2507</span>
+    </div>
+    <button class="ghost-btn" id="newCaseBtn">↻ &nbsp; Vụ án mới</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">HỒ SƠ ĐIỀU TRA / 07</div>
+      <div class="hero-grid">
+        <div>
+          <h1 id="caseTitle">Án mạng tại<br><em>La Lune Rouge</em></h1>
+          <p class="lede" id="caseLede">Một nhà phê bình ẩm thực được tìm thấy trong căn phòng khóa kín. Năm người có động cơ. Một người đang nói dối.</p>
+        </div>
+        <div class="status-card">
+          <div class="status-top"><span>MỨC ĐỘ</span><strong><select class="difficulty-select" id="difficultySelect" aria-label="Chọn mức độ"><option value="HS-1103">DỄ</option><option value="HS-2507">TRUNG BÌNH</option><option value="HS-4109">CAO</option></select></strong></div>
+          <div class="timer" id="timer">00:00</div>
+          <span class="timer-label">THỜI GIAN ĐIỀU TRA</span>
+        </div>
+      </div>
+      <div class="case-facts">
+        <div><span>ĐỊA ĐIỂM</span><strong id="caseLocation">Nhà hàng La Lune Rouge</strong></div>
+        <div><span>THỜI ĐIỂM</span><strong id="caseTime">22:15 · 24.07.2025</strong></div>
+        <div><span>NẠN NHÂN</span><strong id="caseVictim">Trần Minh Khang, 42</strong></div>
+        <div><span>NGUYÊN NHÂN</span><strong id="caseCause">Nghi ngộ độc</strong></div>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Điều hướng vụ án">
+      <button class="tab active" data-view="overview"><span>01</span>Tổng quan</button>
+      <button class="tab" data-view="suspects"><span>02</span>Nghi phạm <b id="suspectCount">5</b></button>
+      <button class="tab" data-view="evidence"><span>03</span>Bằng chứng <b id="evidenceCount">6</b></button>
+      <button class="tab" data-view="interrogate"><span>04</span>Phòng hỏi cung</button>
+    </nav>
+
+    <section id="view" class="view"></section>
+  </main>
+
+  <div class="bottom-bar">
+    <div><span class="lock">▣</span><strong>ĐÁP ÁN ĐÃ ĐƯỢC KHÓA</strong><small>Hung thủ & chuỗi bằng chứng không thể thay đổi</small></div>
+    <button class="accuse-btn" id="accuseBtn">KẾT LUẬN VỤ ÁN <span>→</span></button>
+  </div>
+
+  <dialog id="accuseDialog">
+    <button class="dialog-close" aria-label="Đóng">×</button>
+    <div class="eyebrow">KẾT LUẬN CUỐI CÙNG</div>
+    <h2>Ai là hung thủ?</h2>
+    <p>Chọn một nghi phạm. Bạn chỉ có một cơ hội buộc tội.</p>
+    <div class="accuse-list" id="accuseList"></div>
+    <button class="confirm-btn" id="confirmAccuse" disabled>BUỘC TỘI NGHI PHẠM</button>
+  </dialog>
+
+  <dialog id="resultDialog" class="result-dialog">
+    <div id="resultContent"></div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

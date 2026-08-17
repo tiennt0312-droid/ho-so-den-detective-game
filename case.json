@@ -1,0 +1,25 @@
+{
+  "id":"HS-2507","nextCaseId":"HS-4109","title":"Án mạng tại La Lune Rouge","titleAccent":"La Lune Rouge","difficulty":"TRUNG BÌNH",
+  "lede":"Một nhà phê bình ẩm thực được tìm thấy trong căn phòng khóa kín. Năm người có động cơ. Một người đang nói dối.",
+  "facts":{"location":"Nhà hàng La Lune Rouge","time":"22:15 · 24.07.2025","victim":"Trần Minh Khang, 42","cause":"Nghi ngộ độc"},
+  "overview":{"heading":"Cánh cửa khóa từ bên trong","report":"22:15, nhân viên phá cửa phòng VIP số 3 sau khi không nhận được phản hồi. Trần Minh Khang gục bên bàn, cạnh phần tráng miệng còn dang dở. Cửa sổ khóa, chìa khóa vẫn ở trong túi nạn nhân.","quote":"“Không ai bước vào căn phòng đó sau 22 giờ.”","hint":"Một lời khai đúng vẫn có thể che giấu một giả định sai."},
+  "culpritId":"chef","culpritName":"Lâm Gia Huy",
+  "correctMessage":"Bạn đã xác định đúng Lâm Gia Huy.",
+  "wrongMessage":"Bạn đã buộc tội {name}, nhưng hung thủ là Lâm Gia Huy.",
+  "explanation":"Đồng hồ bếp chậm 8 phút, nên “22:02” thực tế là 22:10. Huy có đủ thời gian thêm sốt độc ở bàn phụ sau khi món rời bếp. Bột hạnh nhân đắng chứa độc chất, còn lời khai của anh ta cố tình dựa vào chiếc đồng hồ sai giờ để tạo ngoại phạm.",
+  "suspects":[
+    {"id":"chef","name":"Lâm Gia Huy","role":"Bếp trưởng","motive":"Bị nạn nhân đe dọa phanh phui việc dùng nguyên liệu giả.","alibi":"Ở bếp đến 22:10","tone":"căng thẳng","answers":{"alibi":"Tôi ở bếp đến 22:10. Ít nhất đó là mốc thời gian tôi nhớ.","motive":"Ông Khang thích dọa dẫm người khác. Nhưng một bài báo không đáng để tôi giết người.","clock":"Đồng hồ bếp chỉ 22:02 khi tôi rời đi. Tôi không biết nó chạy chậm.","dessert":"Sốt được hoàn thiện ở bàn phụ. Bất cứ nhân viên nào cũng có thể tới đó. Gói bột kia là nguyên liệu thử nghiệm.","default":"Tôi không chắc câu đó liên quan thế nào. Điều tôi khẳng định là: tôi ở bếp đến 22:10."}},
+    {"id":"wife","name":"Phạm Thu An","role":"Vợ nạn nhân","motive":"Hợp đồng bảo hiểm trị giá 8 tỷ đồng vừa có hiệu lực.","alibi":"Gọi điện ngoài ban công","tone":"lạnh lùng","answers":{"alibi":"Tôi gọi điện ngoài ban công. Nhật ký cuộc gọi có thể xác nhận.","motive":"Tôi và ông Khang có mâu thuẫn, nhưng mâu thuẫn không biến tôi thành hung thủ.","clock":"Tôi không quan sát đồng hồ trong bếp.","dessert":"Tôi không chạm vào món tráng miệng của ông ấy.","default":"Tôi không chắc câu đó liên quan thế nào. Tôi đã nói mọi điều mình biết."}},
+    {"id":"owner","name":"Đỗ Hoàng Nam","role":"Chủ nhà hàng","motive":"Một bài đánh giá sắp xuất bản có thể khiến nhà hàng phá sản.","alibi":"Tiếp khách bàn số 4","tone":"bồn chồn","answers":{"alibi":"Tôi tiếp khách tại bàn số 4. Có ít nhất ba người nhìn thấy.","motive":"Bài đánh giá đó có thể hủy hoại nhà hàng, nhưng tôi không giết khách của mình.","clock":"Tôi biết đồng hồ từng được sửa, nhưng không hề biết nó chạy chậm.","dessert":"Tôi không tham gia chuẩn bị món ăn.","default":"Tôi đang cố cứu nhà hàng, không phải che giấu một vụ giết người."}},
+    {"id":"waiter","name":"Nguyễn Hải Đăng","role":"Bồi bàn","motive":"Bị nạn nhân làm nhục và khiến mất việc ở nhà hàng cũ.","alibi":"Trong kho rượu","tone":"phòng thủ","answers":{"alibi":"Tôi ở trong kho rượu để tìm chai Bordeaux. Camera quay được lúc tôi bước vào.","motive":"Tôi ghét ông ta, đúng. Nhưng tôi không đầu độc ông ta.","clock":"Tôi không dùng đồng hồ bếp để tính giờ.","dessert":"Tôi mang món tới phòng, nhưng lớp sốt đã có sẵn khi tôi nhận đĩa.","default":"Anh đang cố gán chuyện này cho tôi chỉ vì tôi từng cãi nhau với ông ta."}},
+    {"id":"critic","name":"Vũ Mai Linh","role":"Đồng nghiệp","motive":"Nạn nhân đã đánh cắp bản thảo điều tra độc quyền của cô.","alibi":"Rời nhà hàng lúc 21:50","tone":"điềm tĩnh","answers":{"alibi":"Tôi rời nhà hàng lúc 21:50. Biên lai taxi ghi rõ thời gian.","motive":"Khang lấy bản thảo của tôi, nhưng tôi muốn vạch mặt ông ta bằng sự thật.","clock":"Tôi chưa từng bước vào bếp tối hôm đó.","dessert":"Tôi đã rời đi trước khi món tráng miệng được phục vụ.","default":"Hãy kiểm tra dữ kiện thay vì suy đoán. Tôi không có mặt ở thời điểm gây án."}}
+  ],
+  "evidence":[
+    {"title":"Ly rượu vang vỡ","tag":"PHÁP Y","text":"Chỉ có dấu vân tay nạn nhân. Độc chất không nằm trong rượu."},
+    {"title":"Hóa đơn sửa đồng hồ","tag":"TÀI LIỆU","text":"Đồng hồ bếp chạy chậm đúng 8 phút kể từ lần sửa gần nhất."},
+    {"title":"Bột hạnh nhân đắng","tag":"VẬT CHỨNG","text":"Một gói nguyên liệu không nhãn trong ngăn tủ riêng của bếp trưởng."},
+    {"title":"Ảnh camera hành lang","tag":"HÌNH ẢNH","text":"Ghi nhận bồi bàn vào kho lúc 21:58, nhưng không thấy lúc ra."},
+    {"title":"Tin nhắn đã xóa","tag":"KỸ THUẬT SỐ","text":"“Nếu ông đăng bài đó, cả hai chúng ta cùng chết.” gửi lúc 20:42."},
+    {"title":"Món tráng miệng số 6","tag":"PHÁP Y","text":"Độc chất nằm trong lớp sốt được thêm sau khi món rời bếp chính."}
+  ]
+}
