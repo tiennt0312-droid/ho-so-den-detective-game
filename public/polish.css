@@ -1,0 +1,28 @@
+body { overflow-x: hidden; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+.view > * { animation: view-enter .22s ease-out both; }
+.tab, .ghost-btn, .accuse-btn, .confirm-btn, .accuse-option, .person-btn { transition: color .18s ease, border-color .18s ease, background-color .18s ease, opacity .18s ease; }
+.interrogate-photo img { transition: filter .22s ease, transform .28s ease; }
+.interrogate-portrait:hover .interrogate-photo img { filter: saturate(.78) contrast(1.08); transform: scale(1.012); }
+dialog[open] { animation: dialog-enter .2s ease-out both; }
+dialog[open]::backdrop { animation: backdrop-enter .2s ease-out both; }
+button:focus-visible, a:focus-visible { outline: 1px solid var(--gold); outline-offset: 3px; }
+
+@keyframes view-enter { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes dialog-enter { from { opacity: 0; transform: translateY(7px) scale(.99); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes backdrop-enter { from { opacity: 0; } to { opacity: 1; } }
+
+@media (max-width: 760px) {
+  main { width: 100%; max-width: 100vw; }
+  .hero, .hero-grid, .hero-grid > *, .case-facts, .tabs, .view, .interrogate-layout, .chat { width: 100%; min-width: 0; max-width: 100%; }
+  .hero h1 { overflow-wrap: anywhere; }
+  .case-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .case-facts div { min-width: 0; padding-inline: 14px; }
+  .case-facts strong { display: block; min-width: 0; overflow-wrap: anywhere; }
+  .tabs { max-width: 100%; }
+  .bottom-bar > div { min-width: 0; }
+  .accuse-btn { white-space: nowrap; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

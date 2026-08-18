@@ -1,0 +1,62 @@
+{
+  "id": "HS-5204",
+  "nextCaseId": "HS-1103",
+  "title": "Bữa tiệc không có khách",
+  "titleAccent": "không có khách",
+  "difficulty": "RẤT KHÓ",
+  "lede": "Một tỷ phú chết giữa bữa tối được truyền hình trực tiếp. Không vị khách nào có mặt tại hiện trường, nhưng cả năm người đều đã nói chuyện với nạn nhân trong giờ cuối cùng.",
+  "facts": { "location": "Biệt thự Vọng Nguyệt", "time": "00:04 · 18.08.2026", "victim": "Lê Vĩnh Phúc, 61", "cause": "Ngừng tim do sốc điện" },
+  "overview": {
+    "heading": "Năm màn hình, một chiếc ghế trống",
+    "report": "Nạn nhân tổ chức bữa tối qua hệ thống hội nghị kín. Lúc 00:04, tín hiệu camera mất đúng 47 giây. Khi hình ảnh trở lại, ông đã chết bên bàn ăn. Cửa phòng khóa sinh trắc học và nhật ký không ghi nhận người ra vào.",
+    "quote": "“Không ai ở trong căn phòng đó — ít nhất là không theo cách chúng ta nghĩ.”",
+    "hint": "Đừng chỉ hỏi ai đã chạm vào hung khí. Hãy hỏi ai có thể khiến nạn nhân tự chạm vào nó."
+  },
+  "questions": [
+    { "id": "connection", "label": "Bạn kết nối vào bữa tiệc bằng thiết bị nào?" },
+    { "id": "blackout", "label": "Bạn đã làm gì trong 47 giây tín hiệu bị mất?" },
+    { "id": "parcel", "label": "Bạn biết gì về kiện hàng được giao chiều nay?" },
+    { "id": "voice", "label": "Ai có thể giả giọng nói của nạn nhân?" },
+    { "id": "glass", "label": "Vì sao nạn nhân đổi sang chiếc ly kim loại?" }
+  ],
+  "evidence": [
+    { "title": "Ghế điều khiển", "tag": "KỸ THUẬT", "text": "Dòng điện gây tử vong đi qua tay vịn kim loại, nhưng bộ kích hoạt không nằm trong căn phòng." },
+    { "title": "Kiện rượu niêm phong", "tag": "VẬT CHỨNG", "text": "Chai rượu không chứa độc. Lớp xốp đóng gói lại có một mạch thu phát cực nhỏ." },
+    { "title": "Bản ghi 47 giây", "tag": "DỮ LIỆU", "text": "Mất hình chỉ xảy ra ở luồng phát ra ngoài; camera nội bộ bị lệch âm thanh 3,2 giây." },
+    { "title": "Lệnh giọng nói", "tag": "ÂM THANH", "text": "Hệ thống nhận lệnh bằng giọng nạn nhân lúc 00:03:41, trong khi ông đang ho và không thể nói." },
+    { "title": "Ly bạc số 2", "tag": "PHÁP Y", "text": "Dấu tay nạn nhân phủ lên một lớp gel dẫn điện trong suốt được bôi trước bữa tiệc." },
+    { "title": "Hóa đơn máy chủ", "tag": "TÀI CHÍNH", "text": "Máy chủ xử lý giọng nói được thuê ẩn danh trong 18 phút qua tài khoản trung gian của quỹ từ thiện." },
+    { "title": "Đèn nhà kính", "tag": "HIỆN TRƯỜNG", "text": "Đèn chớp đúng lúc camera mất tín hiệu, tạo mã quang học kích hoạt mạch giấu trong kiện hàng." }
+  ],
+  "suspects": [
+    {
+      "id": "assistant", "name": "Đặng Minh Thư", "role": "Trợ lý điều hành", "portrait": "/assets/suspects-hard/assistant.png",
+      "motive": "Sắp bị sa thải sau khi phát hiện quỹ từ thiện là bình phong chuyển tiền.", "alibi": "Tham dự từ căn hộ riêng", "tone": "kiểm soát",
+      "answers": { "connection": "Tôi dùng máy tính công ty. Nhật ký đăng nhập vẫn còn nguyên.", "blackout": "Tôi gọi cho an ninh ngay khi màn hình tối đi.", "parcel": "Tôi duyệt lịch giao kiện rượu, nhưng kho vận đã kiểm tra niêm phong.", "voice": "Công ty có mẫu giọng ông Phúc để làm quảng cáo. Nhiều người truy cập được.", "glass": "Ông ấy luôn dùng ly bạc trong những dịp quan trọng.", "default": "Tôi đã làm đúng quy trình và không ở gần biệt thự." }
+    },
+    {
+      "id": "investor", "name": "Phan Đức Lâm", "role": "Nhà đầu tư", "portrait": "/assets/suspects-hard/investor.png",
+      "motive": "Nạn nhân định công bố khoản thua lỗ khiến ông mất quyền kiểm soát tập đoàn.", "alibi": "Ở phòng họp của quỹ đầu tư", "tone": "ngạo mạn",
+      "answers": { "connection": "Tôi dùng màn hình phòng họp. Sáu nhân viên nhìn thấy tôi.", "blackout": "Tôi yêu cầu kỹ thuật viên ghi lại sự cố. Tôi không rời ghế.", "parcel": "Rượu là quà của tôi, mua từ nhà đấu giá có uy tín.", "voice": "Phần mềm rẻ tiền nào cũng giả được giọng.", "glass": "Ông Phúc khoe chiếc ly đó từ tuần trước.", "default": "Tôi không cần giết ông ta để giành công ty." }
+    },
+    {
+      "id": "curator", "name": "Vũ Thanh Hà", "role": "Quản lý bộ sưu tập", "portrait": "/assets/suspects-hard/curator.png",
+      "motive": "Một cổ vật giả trong bộ sưu tập sắp bị nạn nhân đem đi giám định.", "alibi": "Ở kho lưu trữ thành phố", "tone": "thận trọng",
+      "answers": { "connection": "Điện thoại cá nhân, qua mạng của kho lưu trữ.", "blackout": "Tôi nghe tiếng va kim loại trước khi hình ảnh mất.", "parcel": "Tôi không biết kiện hàng nào. Tôi chỉ phụ trách cổ vật.", "voice": "Phòng triển lãm từng dùng giọng ông Phúc cho thuyết minh.", "glass": "Ly bạc là đồ phục chế, dẫn điện tốt hơn món nguyên bản.", "default": "Tôi quan tâm hiện vật, không quan tâm cuộc đấu quyền lực." }
+    },
+    {
+      "id": "pianist", "name": "Nguyễn Gia An", "role": "Nhạc sĩ", "portrait": "/assets/suspects-hard/pianist.png",
+      "motive": "Nạn nhân sở hữu bản quyền toàn bộ tác phẩm và từ chối hoàn trả.", "alibi": "Biểu diễn trực tiếp tại phòng thu", "tone": "bất cần",
+      "answers": { "connection": "Máy tính bảng đặt cạnh đàn piano, máy quay ghi lại tất cả.", "blackout": "Tôi vẫn chơi. Âm thanh trong bản ghi chứng minh điều đó.", "parcel": "Tôi thấy ông Phúc mở kiện rượu trước giờ phát sóng.", "voice": "Tôi bắt chước cao độ, không thể giả sinh trắc giọng nói.", "glass": "Ông ấy đổi ly sau khi trợ lý nhắc qua tai nghe.", "default": "Tôi muốn lấy lại âm nhạc, không muốn biến nó thành nhạc tang." }
+    },
+    {
+      "id": "audio", "name": "Trịnh Khải Nam", "role": "Kỹ sư âm thanh", "portrait": "/assets/suspects-hard/audio.png",
+      "motive": "Bị ép nhận trách nhiệm cho vụ rò rỉ dữ liệu giọng nói năm trước.", "alibi": "Trực hệ thống từ trung tâm dữ liệu", "tone": "chính xác",
+      "answers": { "connection": "Tôi ở bảng điều khiển, nhưng chỉ giám sát âm thanh đầu ra.", "blackout": "Tôi chuyển sang đường dự phòng sau 11 giây.", "parcel": "Mạch trong xốp dùng giao thức âm thanh cũ của công ty.", "voice": "Tôi từng xây mô hình giọng ông Phúc, nhưng khóa đã bị thu hồi.", "glass": "Tín hiệu cần vật dẫn. Chiếc ly là cầu nối đến tay vịn.", "default": "Kiến thức kỹ thuật không đồng nghĩa với quyền truy cập." }
+    }
+  ],
+  "culpritId": "assistant",
+  "correctMessage": "Chính xác. Đặng Minh Thư đã biến chính quy trình của biệt thự thành hung khí điều khiển từ xa.",
+  "wrongMessage": "{name} có động cơ và hiểu một phần hệ thống, nhưng không kiểm soát được cả kiện hàng, lịch giao và lệnh giọng nói.",
+  "explanation": "Minh Thư duyệt kiện rượu để giấu mạch thu phát trong lớp xốp, dùng quyền truy cập kho giọng nói tạo lệnh giả và nhắc nạn nhân đổi sang ly bạc đã phủ gel dẫn điện. Trong 47 giây gây nhiễu, đèn nhà kính truyền mã quang học tới mạch trong kiện hàng. Mạch đóng dòng điện qua ly, cơ thể nạn nhân và tay vịn ghế. Cuộc gọi cho an ninh chỉ tạo dấu thời gian ngoại phạm sau khi chuỗi kích hoạt đã tự chạy."
+}
