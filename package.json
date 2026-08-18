@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vinext dev",
-    "build": "rm -rf dist && vinext build && mkdir -p dist/.openai && cp .openai/hosting.json dist/.openai/hosting.json",
+    "build": "node scripts/build.mjs",
     "start": "vinext start"
   },
   "dependencies": {
@@ -19,5 +19,9 @@
     "@vitejs/plugin-react": "6.0.0",
     "@vitejs/plugin-rsc": "0.5.34",
     "vite": "8.1.4"
+  },
+  "description": "Interactive detective game with server-side case APIs and three difficulty levels.",
+  "engines": {
+    "node": ">=20"
   }
 }

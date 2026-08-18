@@ -1,10 +1,12 @@
 param([int]$Port = 4173)
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
+$publicRoot = Join-Path $root 'public'
+$caseRoot = Join-Path $root 'data\cases'
 $utf8 = New-Object System.Text.UTF8Encoding($false)
-$caseData = [IO.File]::ReadAllText((Join-Path $root 'case.json'), $utf8) | ConvertFrom-Json
-$hardCaseData = [IO.File]::ReadAllText((Join-Path $root 'hard-case.json'), $utf8) | ConvertFrom-Json
-$easyCaseData = [IO.File]::ReadAllText((Join-Path $root 'easy-case.json'), $utf8) | ConvertFrom-Json
+$caseData = [IO.File]::ReadAllText((Join-Path $caseRoot 'medium.json'), $utf8) | ConvertFrom-Json
+$hardCaseData = [IO.File]::ReadAllText((Join-Path $caseRoot 'hard.json'), $utf8) | ConvertFrom-Json
+$easyCaseData = [IO.File]::ReadAllText((Join-Path $caseRoot 'easy.json'), $utf8) | ConvertFrom-Json
 $cases = @($easyCaseData, $caseData, $hardCaseData)
 
 function Send-Response($stream,[int]$status,[string]$type,[byte[]]$body){
@@ -37,5 +39,5 @@ try{while($true){$client=$listener.AcceptTcpClient();try{$stream=$client.GetStre
   if($req.Method -eq 'GET' -and ($path -eq '/api/case' -or $path -match '^/api/case/(HS-[0-9]+)$')){$requested='HS-2507';if($path -match '^/api/case/(HS-[0-9]+)$'){$requested=$matches[1]};$selected=Get-Case $requested;$public=@($selected.suspects|ForEach-Object{Public-Suspect $_});Send-Json $stream ([ordered]@{id=$selected.id;nextCaseId=$selected.nextCaseId;title=$selected.title;titleAccent=$selected.titleAccent;difficulty=$selected.difficulty;lede=$selected.lede;facts=$selected.facts;overview=$selected.overview;questions=$selected.questions;suspects=$public;evidence=$selected.evidence})}
   elseif($req.Method -eq 'POST' -and $path -eq '/api/interrogate'){$data=$req.Body|ConvertFrom-Json;$selected=Get-Case $data.caseId;Send-Json $stream ([ordered]@{answer=(Get-Answer $selected $data.suspectId $data.questionId $data.question)})}
   elseif($req.Method -eq 'POST' -and $path -eq '/api/accuse'){$data=$req.Body|ConvertFrom-Json;$selected=Get-Case $data.caseId;$correct=$data.suspectId -eq $selected.culpritId;$name=($selected.suspects|Where-Object{$_.id -eq $data.suspectId}|Select-Object -First 1).name;$message=if($correct){$selected.correctMessage}else{$selected.wrongMessage.Replace('{name}',$name)};Send-Json $stream ([ordered]@{correct=$correct;message=$message;explanation=$selected.explanation})}
-  else{$rel=if($path -eq '/'){'index.html'}else{[Uri]::UnescapeDataString($path.TrimStart('/'))};$allowed=@('index.html','styles.css','suspects.css','interrogation.css','difficulty.css','app.js');$isImage=$rel -match '^assets/(suspects|suspects-hard|suspects-easy)/[a-z-]+\.png$';if($req.Method -eq 'GET' -and (($allowed -contains $rel) -or $isImage)){$file=Join-Path $root $rel;$type=if($rel.EndsWith('.css')){'text/css; charset=utf-8'}elseif($rel.EndsWith('.js')){'text/javascript; charset=utf-8'}elseif($rel.EndsWith('.png')){'image/png'}else{'text/html; charset=utf-8'};Send-Response $stream 200 $type ([IO.File]::ReadAllBytes($file))}else{Send-Json $stream @{error='Not found'} 404}}
+  else{$rel=if($path -eq '/'){'index.html'}else{[Uri]::UnescapeDataString($path.TrimStart('/'))};$allowed=@('index.html','styles.css','suspects.css','interrogation.css','difficulty.css','app.js');$isImage=$rel -match '^assets/(suspects|suspects-hard|suspects-easy)/[a-z-]+\.png$';if($req.Method -eq 'GET' -and (($allowed -contains $rel) -or $isImage)){$file=Join-Path $publicRoot $rel;$type=if($rel.EndsWith('.css')){'text/css; charset=utf-8'}elseif($rel.EndsWith('.js')){'text/javascript; charset=utf-8'}elseif($rel.EndsWith('.png')){'image/png'}else{'text/html; charset=utf-8'};Send-Response $stream 200 $type ([IO.File]::ReadAllBytes($file))}else{Send-Json $stream @{error='Not found'} 404}}
 }catch{try{Send-Json $stream @{error='Bad request'} 400}catch{}}finally{$client.Close()}}}finally{$listener.Stop()}
